@@ -173,10 +173,23 @@ class Waveshare1in54 extends WaveshareNfcDisplay {
   String get imgPath => ImageAssets.waveshare1_54;
 
   @override
-  bool get isBeta => true;
+  Brand get brand => Brand.waveshare;
 
   @override
-  Brand get brand => Brand.waveshare;
+  List<Color> get colors => [Colors.white, Colors.black, Colors.red];
+
+  @override
+  List<ImageProcessingMethod> get processingMethods => [
+        ImageProcessing.bwrFloydSteinbergDither,
+        ImageProcessing.bwrFalseFloydSteinbergDither,
+        ImageProcessing.bwrStuckiDither,
+        ImageProcessing.bwrTriColorAtkinsonDither,
+        ImageProcessing.bwrHalftone,
+        ImageProcessing.bwrThreshold,
+        ImageProcessing.bwrBayerDither,
+        ImageProcessing.bwrSierra2Dither,
+        ImageProcessing.bwrBurkesDither,
+      ];
 }
 
 class Waveshare1in54g extends DisplayDevice {
