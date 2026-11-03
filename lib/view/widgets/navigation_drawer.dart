@@ -243,12 +243,14 @@ class _AppDrawerState extends State<AppDrawer> {
       leading: icon != null
           ? Icon(
               icon,
-              color: currentIndex == index ? colorAccent : colorScheme.onSurface,
+              color:
+                  currentIndex == index ? colorAccent : colorScheme.onSurface,
             )
           : Image.asset(
               assetIcon!,
               height: 18,
-              color: currentIndex == index ? colorAccent : colorScheme.onSurface,
+              color:
+                  currentIndex == index ? colorAccent : colorScheme.onSurface,
             ),
       title: Text(
         title,
@@ -301,12 +303,14 @@ class _AppDrawerState extends State<AppDrawer> {
       leading: icon != null
           ? Icon(
               icon,
-              color: currentIndex == index ? colorAccent : colorScheme.onSurface,
+              color:
+                  currentIndex == index ? colorAccent : colorScheme.onSurface,
             )
           : Image.asset(
               assetIcon!,
               height: 18,
-              color: currentIndex == index ? colorAccent : colorScheme.onSurface,
+              color:
+                  currentIndex == index ? colorAccent : colorScheme.onSurface,
             ),
       title: Text(
         title,
