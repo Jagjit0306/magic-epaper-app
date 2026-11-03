@@ -351,7 +351,7 @@ class _NFCWriteCardState extends State<NFCWriteCard> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimens.radiusM),
-          borderSide: const BorderSide(color: colorAccent, width: 2),
+          borderSide: BorderSide(color: colorAccent, width: 2),
         ),
         filled: true,
         fillColor: colorWhite,

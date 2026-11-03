@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:magicepaperapp/theme/app_appearance.dart';
 
 // Brand
-const Color colorPrimary = Color(0xFFD32F2F);
-const Color colorPrimaryDark = Color(0xFFC72C2C);
-const Color colorAccent = Color(0xFFD32F2F);
+Color get colorPrimary => AppAppearance.accentColor;
+Color get colorPrimaryDark => HSLColor.fromColor(AppAppearance.accentColor)
+    .withLightness(
+      (HSLColor.fromColor(AppAppearance.accentColor).lightness - 0.08)
+          .clamp(0.0, 1.0),
+    )
+    .toColor();
+Color get colorAccent => AppAppearance.accentColor;
 const MaterialColor brandSwatch = MaterialColor(
   0xFFD32F2F,
   <int, Color>{
@@ -52,5 +58,5 @@ const Color drawerHeaderTitle = Color(0xFFFFFFFF);
 
 // Knob / progress
 const Color backCircleColor = Color(0xFFEDEDED);
-const Color indicatorColor = Color(0xFFD32F2F);
+Color get indicatorColor => AppAppearance.accentColor;
 const Color progressSecondaryColor = Color(0xFFEEEEEE);

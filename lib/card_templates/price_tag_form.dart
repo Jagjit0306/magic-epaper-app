@@ -251,7 +251,7 @@ class _PriceTagFormState extends State<PriceTagForm> {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.local_offer_outlined,
+                            Icon(Icons.local_offer_outlined,
                                 color: colorAccent, size: Dimens.iconSizeM),
                             const SizedBox(width: Dimens.spacingS),
                             Text(
@@ -402,7 +402,7 @@ class _PriceTagFormState extends State<PriceTagForm> {
                   onPressed: _openBulkImport,
                   style: OutlinedButton.styleFrom(
                     foregroundColor: colorPrimary,
-                    side: const BorderSide(color: colorPrimary),
+                    side: BorderSide(color: colorPrimary),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(Dimens.radiusM),
                     ),
@@ -486,11 +486,11 @@ class _PriceTagFormState extends State<PriceTagForm> {
           suffixIcon: onScan != null
               ? IconButton(
                   tooltip: appLocalizations.scanBarcodeTooltip,
-                  icon: const Icon(Icons.qr_code_scanner, color: colorAccent),
+                  icon: Icon(Icons.qr_code_scanner, color: colorAccent),
                   onPressed: onScan,
                 )
               : onTap != null
-                  ? const Icon(Icons.arrow_drop_down, color: colorAccent)
+                  ? Icon(Icons.arrow_drop_down, color: colorAccent)
                   : null,
           labelStyle: TextStyle(
             color: colorBlack.withValues(alpha: 0.7),
@@ -502,7 +502,7 @@ class _PriceTagFormState extends State<PriceTagForm> {
             fontSize: Dimens.fontSizeM,
             fontWeight: FontWeight.w400,
           ),
-          floatingLabelStyle: const TextStyle(
+          floatingLabelStyle: TextStyle(
             color: colorPrimary,
             fontSize: Dimens.fontSizeM,
             fontWeight: FontWeight.w600,
@@ -517,7 +517,7 @@ class _PriceTagFormState extends State<PriceTagForm> {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(Dimens.radiusM),
-            borderSide: const BorderSide(color: colorPrimary, width: 2),
+            borderSide: BorderSide(color: colorPrimary, width: 2),
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(Dimens.radiusM),
@@ -551,7 +551,7 @@ class _PriceTagFormState extends State<PriceTagForm> {
           children: [
             Row(
               children: [
-                const Icon(Icons.image_outlined, color: colorAccent, size: 18),
+                Icon(Icons.image_outlined, color: colorAccent, size: 18),
                 const SizedBox(width: Dimens.spacingS),
                 Text(
                   appLocalizations.productImageIn,
@@ -573,7 +573,7 @@ class _PriceTagFormState extends State<PriceTagForm> {
                     ),
                     child: Text(
                       appLocalizations.selected,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: Dimens.fontSizeS,
                         color: colorPrimary,
                         fontWeight: FontWeight.w600,

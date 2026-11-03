@@ -10,7 +10,7 @@ class AppTypography {
     color: colorBlack,
   );
 
-  static const TextStyle floatingLabel = TextStyle(color: colorAccent);
+  static TextStyle get floatingLabel => TextStyle(color: colorAccent);
 
   static const TextStyle textButton = TextStyle(fontWeight: FontWeight.bold);
 

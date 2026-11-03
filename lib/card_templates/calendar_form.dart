@@ -369,7 +369,7 @@ class _CalendarFormState extends State<CalendarForm> {
             ),
             child: Text(
               '$number',
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: Dimens.fontSizeM,
                 fontWeight: FontWeight.bold,
                 color: colorAccent,
@@ -530,7 +530,7 @@ class _CalendarFormState extends State<CalendarForm> {
           children: [
             IconButton(
               onPressed: _isBusy ? null : () => _step(-1),
-              icon: const Icon(Icons.chevron_left, color: colorAccent),
+              icon: Icon(Icons.chevron_left, color: colorAccent),
               tooltip: appLocalizations.calendarPrevious,
             ),
             Expanded(
@@ -556,7 +556,7 @@ class _CalendarFormState extends State<CalendarForm> {
                         ),
                       ),
                       const SizedBox(width: Dimens.spacingXs),
-                      const Icon(Icons.expand_more,
+                      Icon(Icons.expand_more,
                           color: colorAccent, size: Dimens.iconSizeM),
                     ],
                   ),
@@ -577,7 +577,7 @@ class _CalendarFormState extends State<CalendarForm> {
               ),
             IconButton(
               onPressed: _isBusy ? null : () => _step(1),
-              icon: const Icon(Icons.chevron_right, color: colorAccent),
+              icon: Icon(Icons.chevron_right, color: colorAccent),
               tooltip: appLocalizations.calendarNext,
             ),
           ],
@@ -755,7 +755,7 @@ class _CalendarFormState extends State<CalendarForm> {
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
           foregroundColor: colorPrimary,
-          side: const BorderSide(color: colorPrimary),
+          side: BorderSide(color: colorPrimary),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(Dimens.radiusM),
           ),

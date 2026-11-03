@@ -49,7 +49,7 @@ class NFCReadCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                const Icon(Icons.nfc, color: colorAccent, size: 22),
+                Icon(Icons.nfc, color: colorAccent, size: 22),
                 const SizedBox(width: Dimens.spacingS),
                 Text(
                   appLocalizations.readNdefTags,
@@ -130,7 +130,7 @@ class NFCReadCard extends StatelessWidget {
             ),
             if (result.isNotEmpty) ...[
               const SizedBox(height: Dimens.spacingXl),
-              const Row(
+              Row(
                 children: [
                   Icon(Icons.receipt_long,
                       color: colorAccent, size: Dimens.iconSizeM),

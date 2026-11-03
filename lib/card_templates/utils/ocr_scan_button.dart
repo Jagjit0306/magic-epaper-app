@@ -24,7 +24,7 @@ class OcrScanButton extends StatelessWidget {
         ),
         style: OutlinedButton.styleFrom(
           foregroundColor: colorAccent,
-          side: const BorderSide(color: colorAccent, width: 1.5),
+          side: BorderSide(color: colorAccent, width: 1.5),
           padding: const EdgeInsets.symmetric(vertical: Dimens.spacingM),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(Dimens.radiusM),

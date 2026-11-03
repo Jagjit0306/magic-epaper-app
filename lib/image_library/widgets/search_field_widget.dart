@@ -24,7 +24,7 @@ class SearchFieldWidget extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         hintText: appLocalizations.searchImages,
-        prefixIcon: const Icon(Icons.search, color: colorAccent),
+        prefixIcon: Icon(Icons.search, color: colorAccent),
         suffixIcon: controller.text.isNotEmpty
             ? IconButton(
                 icon: const Icon(Icons.clear),
@@ -37,7 +37,7 @@ class SearchFieldWidget extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimens.radiusXl),
-          borderSide: const BorderSide(color: colorAccent),
+          borderSide: BorderSide(color: colorAccent),
         ),
       ),
       onChanged: onChanged,

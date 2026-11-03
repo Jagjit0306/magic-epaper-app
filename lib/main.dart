@@ -5,6 +5,7 @@ import 'package:magicepaperapp/provider/getitlocator.dart';
 import 'package:magicepaperapp/provider/image_loader.dart';
 import 'package:magicepaperapp/provider/locale_provider.dart';
 import 'package:magicepaperapp/provider/developer_options_provider.dart';
+import 'package:magicepaperapp/provider/appearance_provider.dart';
 import 'package:magicepaperapp/view/about_us_screen.dart';
 import 'package:magicepaperapp/view/buy_badge_screen.dart';
 import 'package:magicepaperapp/view/faq_screen.dart';
@@ -30,6 +31,9 @@ Future<void> main() async {
   final developerOptionsProvider = DeveloperOptionsProvider();
   await developerOptionsProvider.loadSaved();
 
+  final appearanceProvider = AppearanceProvider();
+  await appearanceProvider.loadSaved();
+
   runApp(
     MultiProvider(
       providers: [
@@ -38,6 +42,9 @@ Future<void> main() async {
         ChangeNotifierProvider<LocaleProvider>.value(value: localeProvider),
         ChangeNotifierProvider<DeveloperOptionsProvider>.value(
           value: developerOptionsProvider,
+        ),
+        ChangeNotifierProvider<AppearanceProvider>.value(
+          value: appearanceProvider,
         ),
       ],
       child: const MyApp(),
@@ -50,8 +57,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<LocaleProvider>(
-      builder: (context, localeProvider, child) {
+    return Consumer2<LocaleProvider, AppearanceProvider>(
+      builder: (context, localeProvider, appearanceProvider, child) {
+        final accentColor = appearanceProvider.accentColor.color;
         return MaterialApp(
           title: 'Magic ePaper',
           debugShowCheckedModeBanner: false,
@@ -73,7 +81,9 @@ class MyApp extends StatelessWidget {
             '/commandConsole': (context) => const CommandConsoleScreen(),
             '/faq': (context) => const FaqScreen(),
           },
-          theme: AppTheme.lightTheme,
+          theme: AppTheme.lightTheme(accentColor),
+          darkTheme: AppTheme.darkTheme(accentColor),
+          themeMode: appearanceProvider.themeMode,
         );
       },
     );

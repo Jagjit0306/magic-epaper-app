@@ -138,7 +138,7 @@ class _GoodisplayTransferDialogState extends State<GoodisplayTransferDialog> {
             onPressed: _startTransmission,
             child: Text(
               appLocalizations.retry,
-              style: const TextStyle(color: colorAccent),
+              style: TextStyle(color: colorAccent),
             ),
           ),
         TextButton(

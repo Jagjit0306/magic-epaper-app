@@ -123,7 +123,7 @@ class _AppDrawerState extends State<AppDrawer> {
           AspectRatio(
             aspectRatio: 16 / 9,
             child: DrawerHeader(
-              decoration: const BoxDecoration(color: colorAccent),
+              decoration: BoxDecoration(color: colorAccent),
               child: Center(
                 child: Text(
                   appLocalizations.appName,

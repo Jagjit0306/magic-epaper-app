@@ -47,7 +47,7 @@ class NFCStatusCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.nfc_outlined,
                       color: colorAccent,
                       size: 22,
@@ -77,7 +77,7 @@ class NFCStatusCard extends StatelessWidget {
                     ],
                   ),
                   child: IconButton(
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.refresh,
                       color: colorAccent,
                       size: Dimens.iconSizeM,

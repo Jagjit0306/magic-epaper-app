@@ -430,7 +430,7 @@ class _DisplaySelectionScreenState extends State<DisplaySelectionScreen> {
                                         Dimens.spacingS),
                                     child: Text(
                                       brand.label(appLocalizations),
-                                      style: const TextStyle(
+                                      style: TextStyle(
                                         fontSize: Dimens.fontSizeL,
                                         fontWeight: FontWeight.bold,
                                         color: colorAccent,
@@ -565,10 +565,10 @@ class _ActiveFilterChips extends StatelessWidget {
       padding: const EdgeInsets.only(right: 6),
       child: ActionChip(
         label: Text(label, style: const TextStyle(fontSize: 12)),
-        avatar: const Icon(Icons.close, size: 14, color: colorAccent),
+        avatar: Icon(Icons.close, size: 14, color: colorAccent),
         onPressed: onDelete,
         backgroundColor: colorAccent.withValues(alpha: 0.1),
-        labelStyle: const TextStyle(color: colorAccent),
+        labelStyle: TextStyle(color: colorAccent),
         side: BorderSide(color: colorAccent.withValues(alpha: 0.3)),
         visualDensity: VisualDensity.compact,
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -673,8 +673,7 @@ class _FilterScreenState extends State<_FilterScreen> {
               decoration: BoxDecoration(
                 color: isSelected ? colorWhite : const Color(0xFFF2F2F2),
                 border: isSelected
-                    ? const Border(
-                        left: BorderSide(color: colorAccent, width: 3))
+                    ? Border(left: BorderSide(color: colorAccent, width: 3))
                     : const Border(
                         left: BorderSide(color: Colors.transparent, width: 3)),
               ),
@@ -917,7 +916,7 @@ class _FilterScreenState extends State<_FilterScreen> {
             onPressed: _clearAll,
             child: Text(
               l.clearAll,
-              style: const TextStyle(color: colorAccent),
+              style: TextStyle(color: colorAccent),
             ),
           ),
         ],

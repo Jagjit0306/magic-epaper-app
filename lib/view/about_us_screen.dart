@@ -25,6 +25,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
   @override
   Widget build(BuildContext context) {
     final appLocalizations = AppLocalizations.of(context)!;
+    final colorScheme = Theme.of(context).colorScheme;
 
     return CommonScaffold(
       index: 5,
@@ -43,7 +44,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: colorWhite,
+                    color: colorScheme.surface,
                     borderRadius: BorderRadius.circular(Dimens.radiusL),
                     boxShadow: const [
                       BoxShadow(
@@ -72,7 +73,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                           style: GoogleFonts.sora(
                             wordSpacing: 3,
                             fontWeight: FontWeight.w400,
-                            color: colorBlack,
+                            color: colorScheme.onSurface,
                             fontSize: Dimens.fontSizeS,
                           ),
                           softWrap: true,
@@ -104,7 +105,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                                   style: GoogleFonts.sora(
                                     fontSize: 11,
                                     fontWeight: FontWeight.w500,
-                                    color: Colors.red,
+                                    color: colorAccent,
                                     decoration: TextDecoration.underline,
                                   ),
                                   overflow: TextOverflow.ellipsis,
@@ -120,7 +121,52 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                 const SizedBox(height: Dimens.spacingMd),
                 Container(
                   decoration: BoxDecoration(
-                    color: colorWhite,
+                    color: colorScheme.surface,
+                    boxShadow: const [
+                      BoxShadow(
+                        blurRadius: 1,
+                        color: grey500,
+                        offset: Offset(0, 1),
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(Dimens.radiusS),
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.call_split,
+                      size: 36,
+                      color: colorScheme.primary,
+                    ),
+                    title: Text(
+                      appLocalizations.forkCreditTitle,
+                      style: GoogleFonts.sora(
+                        fontSize: Dimens.fontSizeL,
+                        fontWeight: FontWeight.w500,
+                        color: colorScheme.onSurface,
+                      ),
+                    ),
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top: Dimens.spacingXs),
+                      child: Text(
+                        appLocalizations.forkCreditDescription,
+                        style: GoogleFonts.sora(
+                          fontSize: Dimens.fontSizeS,
+                          fontWeight: FontWeight.w400,
+                          color: colorScheme.onSurfaceVariant,
+                        ),
+                        softWrap: true,
+                      ),
+                    ),
+                    onTap: () => openUrl(
+                      context,
+                      'https://github.com/fossasia/magic-epaper-app',
+                    ),
+                  ),
+                ),
+                const SizedBox(height: Dimens.spacingMd),
+                Container(
+                  decoration: BoxDecoration(
+                    color: colorScheme.surface,
                     boxShadow: const [
                       BoxShadow(
                         blurRadius: 1,
@@ -156,7 +202,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                           style: GoogleFonts.sora(
                             fontSize: Dimens.fontSizeL,
                             fontWeight: FontWeight.w500,
-                            color: colorBlack,
+                            color: colorScheme.onSurface,
                           ),
                         ),
                         subtitle: Text(
@@ -179,7 +225,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                 const SizedBox(height: Dimens.spacingMd),
                 Container(
                   decoration: BoxDecoration(
-                    color: colorWhite,
+                    color: colorScheme.surface,
                     boxShadow: const [
                       BoxShadow(
                         blurRadius: 1,
@@ -214,7 +260,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                           style: GoogleFonts.sora(
                             fontSize: Dimens.fontSizeL,
                             fontWeight: FontWeight.w500,
-                            color: colorBlack,
+                            color: colorScheme.onSurface,
                           ),
                         ),
                         subtitle: Text(
@@ -242,7 +288,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                           style: GoogleFonts.sora(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
-                            color: colorBlack,
+                            color: colorScheme.onSurface,
                           ),
                         ),
                         subtitle: Text(

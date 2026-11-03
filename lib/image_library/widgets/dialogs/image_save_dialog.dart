@@ -98,7 +98,7 @@ class _ImageSaveDialogState extends State<ImageSaveDialog> {
             color: colorAccent.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(Dimens.radiusXl),
           ),
-          child: const Icon(
+          child: Icon(
             Icons.save_outlined,
             color: colorAccent,
             size: Dimens.iconSizeL,
@@ -183,7 +183,7 @@ class _ImageSaveDialogState extends State<ImageSaveDialog> {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(Dimens.radiusXl),
-              borderSide: const BorderSide(color: colorAccent, width: 2),
+              borderSide: BorderSide(color: colorAccent, width: 2),
             ),
             errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(Dimens.radiusXl),

@@ -116,7 +116,7 @@ class _SantekTransferDialogState extends State<SantekTransferDialog>
                 animation: _pulseAnimation,
                 builder: (context, child) =>
                     Transform.scale(scale: _pulseAnimation.value, child: child),
-                child: const Icon(Icons.nfc, size: 60, color: colorPrimary),
+                child: Icon(Icons.nfc, size: 60, color: colorPrimary),
               ),
               const SizedBox(height: 24),
               const Text(

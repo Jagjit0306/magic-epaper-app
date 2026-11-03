@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image/image.dart' as img;
 import 'package:magicepaperapp/constants/color_constants.dart';
@@ -188,7 +188,7 @@ class _WaveshareTransferDialogState extends State<WaveshareTransferDialog>
                 animation: _pulseAnimation,
                 builder: (context, child) =>
                     Transform.scale(scale: _pulseAnimation.value, child: child),
-                child: const Icon(Icons.nfc, size: 60, color: colorPrimary),
+                child: Icon(Icons.nfc, size: 60, color: colorPrimary),
               ),
               const SizedBox(height: Dimens.spacingXxl),
               Text(

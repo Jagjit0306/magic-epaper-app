@@ -38,7 +38,7 @@ Future<T> _showLoaderWhile<T>(
     context: context,
     barrierDismissible: false,
     barrierColor: colorBlack54,
-    builder: (_) => const Center(
+    builder: (_) => Center(
       child: CircularProgressIndicator(
         valueColor: AlwaysStoppedAnimation(colorAccent),
       ),
@@ -407,7 +407,7 @@ class _OcrReviewSheetState extends State<_OcrReviewSheet> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
-                const Icon(Icons.document_scanner_outlined,
+                Icon(Icons.document_scanner_outlined,
                     color: colorAccent, size: 20),
                 const SizedBox(width: 8),
                 Text(
@@ -469,7 +469,7 @@ class _OcrReviewSheetState extends State<_OcrReviewSheet> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: colorAccent),
+                            borderSide: BorderSide(color: colorAccent),
                           ),
                         ),
                       ),

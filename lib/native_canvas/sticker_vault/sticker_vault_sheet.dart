@@ -469,7 +469,7 @@ class _StickerVaultSheetState extends State<_StickerVaultSheet> {
 
   Widget _buildBody(ScrollController scrollController) {
     if (_loading) {
-      return const Center(child: CircularProgressIndicator(color: colorAccent));
+      return Center(child: CircularProgressIndicator(color: colorAccent));
     }
     if (_error != null) {
       return _buildMessage(
@@ -513,7 +513,7 @@ class _StickerVaultSheetState extends State<_StickerVaultSheet> {
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: isPlacing
-              ? const Center(
+              ? Center(
                   child: SizedBox(
                     width: 22,
                     height: 22,

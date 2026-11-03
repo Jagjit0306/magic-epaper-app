@@ -323,7 +323,7 @@ class _WeatherFormState extends State<WeatherForm> {
           children: [
             Row(
               children: [
-                const Icon(Icons.wb_cloudy_outlined,
+                Icon(Icons.wb_cloudy_outlined,
                     color: colorAccent, size: Dimens.iconSizeM),
                 const SizedBox(width: Dimens.spacingS),
                 Text(
@@ -348,13 +348,12 @@ class _WeatherFormState extends State<WeatherForm> {
               const SizedBox(height: Dimens.spacingS),
               Row(
                 children: [
-                  const Icon(Icons.error_outline,
-                      color: colorPrimary, size: 18),
+                  Icon(Icons.error_outline, color: colorPrimary, size: 18),
                   const SizedBox(width: Dimens.spacingS),
                   Expanded(
                     child: Text(
                       _errorText!,
-                      style: const TextStyle(color: colorPrimary, fontSize: 13),
+                      style: TextStyle(color: colorPrimary, fontSize: 13),
                     ),
                   ),
                 ],
@@ -449,7 +448,7 @@ class _WeatherFormState extends State<WeatherForm> {
     final label = city.displayName.split(',').first.trim();
     final busy = _isFetching || _isGenerating;
     return InputChip(
-      avatar: const Icon(Icons.history, size: 16, color: colorAccent),
+      avatar: Icon(Icons.history, size: 16, color: colorAccent),
       label: Text(label),
       labelStyle: const TextStyle(
         fontSize: Dimens.fontSizeS,
@@ -515,10 +514,10 @@ class _WeatherFormState extends State<WeatherForm> {
             decoration: InputDecoration(
               labelText: appLocalizations.weatherCityLabel,
               hintText: appLocalizations.weatherCityHint,
-              prefixIcon: const Icon(Icons.location_city,
+              prefixIcon: Icon(Icons.location_city,
                   color: colorAccent, size: Dimens.iconSizeM),
               suffixIcon: _isFetching
-                  ? const Padding(
+                  ? Padding(
                       padding: EdgeInsets.all(12),
                       child: SizedBox(
                         width: 18,
@@ -531,7 +530,7 @@ class _WeatherFormState extends State<WeatherForm> {
                       ),
                     )
                   : IconButton(
-                      icon: const Icon(Icons.search, color: colorAccent),
+                      icon: Icon(Icons.search, color: colorAccent),
                       onPressed: _isGenerating ? null : () => _fetchWeather(),
                     ),
               labelStyle: TextStyle(
@@ -539,7 +538,7 @@ class _WeatherFormState extends State<WeatherForm> {
                 fontSize: Dimens.fontSizeM,
                 fontWeight: FontWeight.w500,
               ),
-              floatingLabelStyle: const TextStyle(
+              floatingLabelStyle: TextStyle(
                 color: colorPrimary,
                 fontSize: Dimens.fontSizeM,
                 fontWeight: FontWeight.w600,
@@ -559,7 +558,7 @@ class _WeatherFormState extends State<WeatherForm> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(Dimens.radiusM),
-                borderSide: const BorderSide(color: colorPrimary, width: 2),
+                borderSide: BorderSide(color: colorPrimary, width: 2),
               ),
               contentPadding: const EdgeInsets.symmetric(
                   horizontal: Dimens.spacingL, vertical: 14),
@@ -585,7 +584,7 @@ class _WeatherFormState extends State<WeatherForm> {
                     final option = options.elementAt(index);
                     return ListTile(
                       dense: true,
-                      leading: const Icon(Icons.location_on_outlined,
+                      leading: Icon(Icons.location_on_outlined,
                           color: colorAccent, size: Dimens.iconSizeM),
                       title: Text(
                         option.displayName,

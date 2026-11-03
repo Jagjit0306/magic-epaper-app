@@ -83,7 +83,7 @@ class _ImagePropertiesDialogState extends State<ImagePropertiesDialog> {
   Widget _buildHeader(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(Dimens.spacingL),
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: colorAccent,
         borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
       ),

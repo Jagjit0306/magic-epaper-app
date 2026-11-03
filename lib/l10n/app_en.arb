@@ -1420,5 +1420,16 @@
         "type": "int"
       }
     }
-  }
+  },
+  "appearance": "Appearance",
+  "lightTheme": "Light",
+  "darkTheme": "Dark",
+  "accentColor": "Accent color",
+  "red": "Red",
+  "blue": "Blue",
+  "green": "Green",
+  "purple": "Purple",
+  "orange": "Orange",
+  "forkCreditTitle": "Fork and contributions",
+  "forkCreditDescription": "Forked from FOSSASIA's Magic ePaper app. This fork includes startup fixes, Waveshare 1.54-inch tri-color support, and an NFC color-plane fix."
 }

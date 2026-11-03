@@ -679,8 +679,7 @@ class _BulkCsvImportScreenState extends State<BulkCsvImportScreen> {
                 color: colorPrimary.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
-              child:
-                  const Icon(Icons.upload_file, color: colorPrimary, size: 34),
+              child: Icon(Icons.upload_file, color: colorPrimary, size: 34),
             ),
             const SizedBox(height: Dimens.spacingL),
             Text(
@@ -899,7 +898,7 @@ class _BulkCsvImportScreenState extends State<BulkCsvImportScreen> {
       ),
       child: Row(
         children: [
-          const Icon(Icons.description_outlined, color: colorAccent, size: 20),
+          Icon(Icons.description_outlined, color: colorAccent, size: 20),
           const SizedBox(width: Dimens.spacingM),
           Expanded(
             child: Column(
@@ -927,7 +926,7 @@ class _BulkCsvImportScreenState extends State<BulkCsvImportScreen> {
                   horizontal: Dimens.spacingM, vertical: Dimens.spacingS),
             ),
             child: Text(appLocalizations.bulkChangeFile,
-                style: const TextStyle(color: colorPrimary)),
+                style: TextStyle(color: colorPrimary)),
           ),
         ],
       ),
@@ -1011,7 +1010,7 @@ class _BulkCsvImportScreenState extends State<BulkCsvImportScreen> {
                       _showMapping
                           ? appLocalizations.bulkColumnsAutoMatched
                           : appLocalizations.bulkEditColumns,
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: colorPrimary, fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -1294,7 +1293,7 @@ class _BulkCsvImportScreenState extends State<BulkCsvImportScreen> {
                 label: Text(appLocalizations.bulkAddPhotosInOrder),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: colorPrimary,
-                  side: const BorderSide(color: colorPrimary),
+                  side: BorderSide(color: colorPrimary),
                   padding:
                       const EdgeInsets.symmetric(vertical: Dimens.spacingM),
                   shape: RoundedRectangleBorder(
@@ -1338,7 +1337,7 @@ class _BulkCsvImportScreenState extends State<BulkCsvImportScreen> {
                                 size: 18, color: grey500)
                             : Text(
                                 '${index + 1}',
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: colorPrimary),
                               ),
@@ -1482,7 +1481,7 @@ class _BulkCsvImportScreenState extends State<BulkCsvImportScreen> {
                             label: Text(appLocalizations.bulkPickFile),
                             style: OutlinedButton.styleFrom(
                                 foregroundColor: colorPrimary,
-                                side: const BorderSide(color: colorPrimary),
+                                side: BorderSide(color: colorPrimary),
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: Dimens.spacingL,
                                     vertical: Dimens.spacingM)),

@@ -172,7 +172,7 @@ class _BulkResultsScreenState extends State<BulkResultsScreen> {
                               borderRadius:
                                   BorderRadius.circular(Dimens.radiusL),
                             ),
-                            child: const Icon(Icons.style_outlined,
+                            child: Icon(Icons.style_outlined,
                                 size: 20, color: colorPrimary),
                           ),
                           const SizedBox(width: Dimens.spacingM),
@@ -264,18 +264,18 @@ class _BulkResultsScreenState extends State<BulkResultsScreen> {
               IconButton(
                 tooltip: appLocalizations.bulkEdit,
                 onPressed: () => _edit(badge),
-                icon: const Icon(Icons.edit_outlined, color: colorPrimary),
+                icon: Icon(Icons.edit_outlined, color: colorPrimary),
               ),
               if (widget.device != null)
                 IconButton(
                   tooltip: appLocalizations.bulkTransfer,
                   onPressed: () => _transfer(badge),
-                  icon: const Icon(Icons.nfc, color: colorPrimary),
+                  icon: Icon(Icons.nfc, color: colorPrimary),
                 ),
               IconButton(
                 tooltip: appLocalizations.save,
                 onPressed: () => _saveOne(badge),
-                icon: const Icon(Icons.save_alt, color: colorAccent),
+                icon: Icon(Icons.save_alt, color: colorAccent),
               ),
             ],
           ),

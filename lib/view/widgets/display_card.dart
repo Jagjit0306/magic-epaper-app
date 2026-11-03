@@ -39,6 +39,7 @@ class DisplayCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     final String driverText;
     final currentDisplay = display;
 
@@ -92,12 +93,12 @@ class DisplayCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(Dimens.radiusXl * scale),
       splashColor: Colors.black.withAlpha(20),
       child: Card(
-        color: colorWhite,
+        color: colorScheme.surface,
         elevation: isSelected ? 4 : 1,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(Dimens.radiusXl * scale),
           side: BorderSide(
-            color: isSelected ? colorPrimary : grey300,
+            color: isSelected ? colorPrimary : colorScheme.outlineVariant,
             width:
                 isSelected ? Dimens.borderWidthThick : Dimens.borderWidthThin,
           ),

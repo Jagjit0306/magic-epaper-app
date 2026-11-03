@@ -273,7 +273,7 @@ class _ContactCardFormState extends State<ContactCardForm> {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.contact_page_outlined,
+                            Icon(Icons.contact_page_outlined,
                                 color: colorAccent, size: Dimens.iconSizeM),
                             const SizedBox(width: Dimens.spacingS),
                             Text(
@@ -422,7 +422,7 @@ class _ContactCardFormState extends State<ContactCardForm> {
                   onPressed: _openBulkImport,
                   style: OutlinedButton.styleFrom(
                     foregroundColor: colorPrimary,
-                    side: const BorderSide(color: colorPrimary),
+                    side: BorderSide(color: colorPrimary),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(Dimens.radiusM),
                     ),
@@ -471,7 +471,7 @@ class _ContactCardFormState extends State<ContactCardForm> {
           children: [
             Row(
               children: [
-                const Icon(Icons.qr_code_2, color: colorAccent, size: 18),
+                Icon(Icons.qr_code_2, color: colorAccent, size: 18),
                 const SizedBox(width: Dimens.spacingS),
                 Text(
                   appLocalizations.qrCodeContent,
@@ -584,7 +584,7 @@ class _ContactCardFormState extends State<ContactCardForm> {
           suffixIcon: onScan != null
               ? IconButton(
                   tooltip: appLocalizations.scanQrCode,
-                  icon: const Icon(Icons.qr_code_scanner, color: colorAccent),
+                  icon: Icon(Icons.qr_code_scanner, color: colorAccent),
                   onPressed: onScan,
                 )
               : null,
@@ -598,7 +598,7 @@ class _ContactCardFormState extends State<ContactCardForm> {
             fontSize: Dimens.fontSizeM,
             fontWeight: FontWeight.w400,
           ),
-          floatingLabelStyle: const TextStyle(
+          floatingLabelStyle: TextStyle(
             color: colorPrimary,
             fontSize: Dimens.fontSizeM,
             fontWeight: FontWeight.w600,
@@ -613,7 +613,7 @@ class _ContactCardFormState extends State<ContactCardForm> {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(Dimens.radiusM),
-            borderSide: const BorderSide(color: colorPrimary, width: 2),
+            borderSide: BorderSide(color: colorPrimary, width: 2),
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(Dimens.radiusM),
@@ -647,8 +647,7 @@ class _ContactCardFormState extends State<ContactCardForm> {
           children: [
             Row(
               children: [
-                const Icon(Icons.photo_camera_outlined,
-                    color: colorAccent, size: 18),
+                Icon(Icons.photo_camera_outlined, color: colorAccent, size: 18),
                 const SizedBox(width: Dimens.spacingS),
                 Text(
                   appLocalizations.profilePhoto,

@@ -112,7 +112,7 @@ class _VCardFormWidgetState extends State<VCardFormWidget> {
       children: [
         Row(
           children: [
-            const Icon(Icons.contact_page, color: colorAccent, size: 22),
+            Icon(Icons.contact_page, color: colorAccent, size: 22),
             const SizedBox(width: Dimens.spacingS),
             Text(
               appLocalizations.vCardContactInformation,
@@ -307,7 +307,7 @@ class _VCardFormWidgetState extends State<VCardFormWidget> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimens.radiusM),
-          borderSide: const BorderSide(color: colorAccent, width: 2),
+          borderSide: BorderSide(color: colorAccent, width: 2),
         ),
         filled: true,
         fillColor: colorWhite,

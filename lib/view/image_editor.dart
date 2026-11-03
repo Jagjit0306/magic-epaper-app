@@ -207,13 +207,12 @@ class _ImageEditorState extends State<ImageEditor> {
                         value: value,
                         strokeWidth: 6,
                         backgroundColor: Colors.grey[200],
-                        valueColor:
-                            const AlwaysStoppedAnimation<Color>(colorAccent),
+                        valueColor: AlwaysStoppedAnimation<Color>(colorAccent),
                       ),
                     ),
                     Text(
                       '${(value * 100).toInt()}%',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: Dimens.fontSizeXl,
                         fontWeight: FontWeight.bold,
                         color: colorAccent,
@@ -735,7 +734,7 @@ class _ImageEditorState extends State<ImageEditor> {
               children: [
                 Text(
                   appLocalizations.fullRefreshInfo,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: Dimens.fontSizeL,
                     color: colorAccent,
@@ -749,7 +748,7 @@ class _ImageEditorState extends State<ImageEditor> {
                 const SizedBox(height: Dimens.spacingL),
                 Text(
                   appLocalizations.partialRefreshInfo,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: Dimens.fontSizeL,
                     color: colorAccent,
@@ -934,7 +933,7 @@ class _ImageEditorState extends State<ImageEditor> {
                         child: OutlinedButton(
                           style: OutlinedButton.styleFrom(
                             foregroundColor: colorAccent,
-                            side: const BorderSide(color: colorAccent),
+                            side: BorderSide(color: colorAccent),
                             padding: const EdgeInsets.symmetric(vertical: 12),
                           ),
                           onPressed: () {
@@ -1030,7 +1029,7 @@ class _ImageEditorState extends State<ImageEditor> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const CircularProgressIndicator(
+                    CircularProgressIndicator(
                       valueColor: AlwaysStoppedAnimation<Color>(colorAccent),
                     ),
                     const SizedBox(height: Dimens.spacingL),

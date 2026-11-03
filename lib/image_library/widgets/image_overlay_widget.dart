@@ -21,7 +21,7 @@ class ImageOverlayWidget extends StatelessWidget {
     return Stack(
       children: [
         if (isDeleteMode && isSelected)
-          const Positioned(
+          Positioned(
             top: 8,
             right: 8,
             child: CircleAvatar(

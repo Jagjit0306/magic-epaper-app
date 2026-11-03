@@ -238,7 +238,7 @@ class _EventBadgeFormState extends State<EventBadgeForm> {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.edit_outlined,
+                            Icon(Icons.edit_outlined,
                                 color: colorAccent, size: Dimens.iconSizeM),
                             const SizedBox(width: Dimens.spacingS),
                             Text(
@@ -384,7 +384,7 @@ class _EventBadgeFormState extends State<EventBadgeForm> {
                   onPressed: _openBulkImport,
                   style: OutlinedButton.styleFrom(
                     foregroundColor: colorPrimary,
-                    side: const BorderSide(color: colorPrimary),
+                    side: BorderSide(color: colorPrimary),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(Dimens.radiusM),
                     ),
@@ -461,7 +461,7 @@ class _EventBadgeFormState extends State<EventBadgeForm> {
           suffixIcon: onScan != null
               ? IconButton(
                   tooltip: appLocalizations.scanQrCode,
-                  icon: const Icon(Icons.qr_code_scanner, color: colorAccent),
+                  icon: Icon(Icons.qr_code_scanner, color: colorAccent),
                   onPressed: onScan,
                 )
               : null,
@@ -475,7 +475,7 @@ class _EventBadgeFormState extends State<EventBadgeForm> {
             fontSize: Dimens.fontSizeM,
             fontWeight: FontWeight.w400,
           ),
-          floatingLabelStyle: const TextStyle(
+          floatingLabelStyle: TextStyle(
             color: colorPrimary,
             fontSize: Dimens.fontSizeM,
             fontWeight: FontWeight.w600,
@@ -490,7 +490,7 @@ class _EventBadgeFormState extends State<EventBadgeForm> {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(Dimens.radiusM),
-            borderSide: const BorderSide(color: colorPrimary, width: 2),
+            borderSide: BorderSide(color: colorPrimary, width: 2),
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(Dimens.radiusM),
@@ -524,8 +524,7 @@ class _EventBadgeFormState extends State<EventBadgeForm> {
           children: [
             Row(
               children: [
-                const Icon(Icons.photo_camera_outlined,
-                    color: colorAccent, size: 18),
+                Icon(Icons.photo_camera_outlined, color: colorAccent, size: 18),
                 const SizedBox(width: Dimens.spacingS),
                 Text(
                   appLocalizations.profilePhoto,

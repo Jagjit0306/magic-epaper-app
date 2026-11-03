@@ -81,7 +81,7 @@ class _ImageRenameDialogState extends State<ImageRenameDialog> {
             color: colorAccent.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(Dimens.radiusXl),
           ),
-          child: const Icon(
+          child: Icon(
             Icons.edit_outlined,
             color: colorAccent,
             size: Dimens.iconSizeL,

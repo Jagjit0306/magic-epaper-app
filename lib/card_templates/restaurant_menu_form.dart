@@ -432,12 +432,11 @@ class _RestaurantMenuFormState extends State<RestaurantMenuForm> {
           DropdownButtonFormField<String>(
             initialValue: _fontFamily,
             isExpanded: true,
-            icon: const Icon(Icons.arrow_drop_down, color: colorAccent),
+            icon: Icon(Icons.arrow_drop_down, color: colorAccent),
             decoration: InputDecoration(
               filled: true,
               fillColor: grey50,
-              prefixIcon:
-                  const Icon(Icons.text_fields, color: colorAccent, size: 20),
+              prefixIcon: Icon(Icons.text_fields, color: colorAccent, size: 20),
               contentPadding: const EdgeInsets.symmetric(
                 horizontal: Dimens.spacingM,
                 vertical: 4,
@@ -452,7 +451,7 @@ class _RestaurantMenuFormState extends State<RestaurantMenuForm> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(Dimens.radiusM),
-                borderSide: const BorderSide(color: colorPrimary, width: 2),
+                borderSide: BorderSide(color: colorPrimary, width: 2),
               ),
             ),
             items: [
@@ -751,7 +750,7 @@ class _RestaurantMenuFormState extends State<RestaurantMenuForm> {
                 ),
                 child: Text(
                   '${index + 1}',
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: Dimens.fontSizeS,
                     fontWeight: FontWeight.bold,
                     color: colorPrimary,
@@ -953,7 +952,7 @@ class _RestaurantMenuFormState extends State<RestaurantMenuForm> {
           color: colorBlack.withValues(alpha: 0.7),
           fontSize: Dimens.fontSizeM,
         ),
-        floatingLabelStyle: const TextStyle(
+        floatingLabelStyle: TextStyle(
           color: colorPrimary,
           fontWeight: FontWeight.w600,
         ),
@@ -974,7 +973,7 @@ class _RestaurantMenuFormState extends State<RestaurantMenuForm> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimens.radiusM),
-          borderSide: const BorderSide(color: colorPrimary, width: 2),
+          borderSide: BorderSide(color: colorPrimary, width: 2),
         ),
       ),
     );

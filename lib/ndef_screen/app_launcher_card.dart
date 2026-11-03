@@ -119,7 +119,7 @@ class _AppLauncherCardState extends State<AppLauncherCard> {
               children: [
                 Row(
                   children: [
-                    const Icon(Icons.apps, color: colorAccent, size: 22),
+                    Icon(Icons.apps, color: colorAccent, size: 22),
                     const SizedBox(width: Dimens.spacingS),
                     Text(
                       appLocalizations.writeAppLauncherData,
@@ -268,8 +268,7 @@ class _AppLauncherCardState extends State<AppLauncherCard> {
             hintText: appLocalizations.searchApps,
             prefixIcon: Icons.search,
             suffixIcon: IconButton(
-              icon: const Icon(Icons.add,
-                  color: colorAccent, size: Dimens.iconSizeM),
+              icon: Icon(Icons.add, color: colorAccent, size: Dimens.iconSizeM),
               onPressed: () =>
                   setState(() => _showCustomInput = !_showCustomInput),
               tooltip: appLocalizations.customPackageName,
@@ -315,7 +314,7 @@ class _AppLauncherCardState extends State<AppLauncherCard> {
           borderRadius: BorderRadius.circular(Dimens.radiusL),
           border: Border.all(color: mdGrey400.withValues(alpha: 0.2)),
         ),
-        child: const Center(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -411,7 +410,7 @@ class _AppLauncherCardState extends State<AppLauncherCard> {
                 ),
               ),
               trailing: isSelected
-                  ? const Icon(
+                  ? Icon(
                       Icons.check_circle,
                       color: colorAccent,
                       size: Dimens.iconSizeM,
@@ -461,7 +460,7 @@ class _AppLauncherCardState extends State<AppLauncherCard> {
         color: colorAccent.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(Dimens.radiusM),
       ),
-      child: const Icon(
+      child: Icon(
         Icons.android,
         color: colorAccent,
         size: Dimens.iconSizeL,
@@ -495,7 +494,7 @@ class _AppLauncherCardState extends State<AppLauncherCard> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimens.radiusM),
-          borderSide: const BorderSide(color: colorAccent, width: 2),
+          borderSide: BorderSide(color: colorAccent, width: 2),
         ),
         filled: true,
         fillColor: colorWhite,
@@ -536,10 +535,10 @@ class _AppLauncherCardState extends State<AppLauncherCard> {
       width: double.infinity,
       child: OutlinedButton.icon(
         onPressed: () => setState(() => _isExpanded = true),
-        icon: const Icon(Icons.apps, color: colorAccent),
+        icon: Icon(Icons.apps, color: colorAccent),
         label: Text(
           appLocalizations.selectApplication,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: Dimens.fontSizeM,
             fontWeight: FontWeight.w600,
             color: colorAccent,

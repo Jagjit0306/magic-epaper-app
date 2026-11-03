@@ -273,7 +273,7 @@ class _QrTagFormState extends State<QrTagForm> {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.qr_code_2,
+                            Icon(Icons.qr_code_2,
                                 color: colorAccent, size: Dimens.iconSizeM),
                             const SizedBox(width: Dimens.spacingS),
                             Text(
@@ -473,7 +473,7 @@ class _QrTagFormState extends State<QrTagForm> {
           ),
           child: Row(
             children: [
-              const Icon(Icons.lightbulb_outline, size: 16, color: colorAccent),
+              Icon(Icons.lightbulb_outline, size: 16, color: colorAccent),
               const SizedBox(width: Dimens.spacingS),
               Expanded(
                 child: Text(
@@ -611,7 +611,7 @@ class _QrTagFormState extends State<QrTagForm> {
     return DropdownButtonFormField<String>(
       initialValue: _wifiSecurity,
       isExpanded: true,
-      icon: const Icon(Icons.arrow_drop_down, color: colorAccent),
+      icon: Icon(Icons.arrow_drop_down, color: colorAccent),
       decoration: _fieldDecoration(
         appLocalizations.qrWifiSecurityLabel,
         Icons.security_outlined,
@@ -651,7 +651,7 @@ class _QrTagFormState extends State<QrTagForm> {
     return DropdownButtonFormField<String>(
       initialValue: _selectedIconKey,
       isExpanded: true,
-      icon: const Icon(Icons.arrow_drop_down, color: colorAccent),
+      icon: Icon(Icons.arrow_drop_down, color: colorAccent),
       decoration: _fieldDecoration(
         appLocalizations.qrTagIconLabel,
         Icons.emoji_symbols_outlined,
@@ -701,7 +701,7 @@ class _QrTagFormState extends State<QrTagForm> {
         fontSize: Dimens.fontSizeM,
         fontWeight: FontWeight.w500,
       ),
-      floatingLabelStyle: const TextStyle(
+      floatingLabelStyle: TextStyle(
         color: colorPrimary,
         fontSize: Dimens.fontSizeM,
         fontWeight: FontWeight.w600,
@@ -716,7 +716,7 @@ class _QrTagFormState extends State<QrTagForm> {
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(Dimens.radiusM),
-        borderSide: const BorderSide(color: colorPrimary, width: 2),
+        borderSide: BorderSide(color: colorPrimary, width: 2),
       ),
       contentPadding:
           const EdgeInsets.symmetric(horizontal: Dimens.spacingL, vertical: 14),
@@ -750,7 +750,7 @@ class _QrTagFormState extends State<QrTagForm> {
     } else if (onScan != null) {
       suffix = IconButton(
         tooltip: appLocalizations.scanBarcodeTooltip,
-        icon: const Icon(Icons.qr_code_scanner, color: colorAccent),
+        icon: Icon(Icons.qr_code_scanner, color: colorAccent),
         onPressed: onScan,
       );
     }

@@ -70,7 +70,7 @@ class ImagePreviewDialog extends StatelessWidget {
   Widget _buildHeader(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(Dimens.spacingL),
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: colorAccent,
         borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
       ),

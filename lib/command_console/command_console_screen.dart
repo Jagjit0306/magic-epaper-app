@@ -281,7 +281,7 @@ class _CommandConsoleScreenState extends State<CommandConsoleScreen>
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(Dimens.spacingL),
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: colorAccent,
                     borderRadius: BorderRadius.vertical(
                       top: Radius.circular(Dimens.radiusL),
@@ -524,7 +524,7 @@ class _CommandConsoleScreenState extends State<CommandConsoleScreen>
       ),
       child: Row(
         children: [
-          const Text(
+          Text(
             '>',
             style: TextStyle(
               fontFamily: 'monospace',
@@ -568,7 +568,7 @@ class _CommandConsoleScreenState extends State<CommandConsoleScreen>
                     height: 20,
                     child: CircularProgressIndicator(strokeWidth: 2),
                   )
-                : const Icon(Icons.send, color: colorAccent),
+                : Icon(Icons.send, color: colorAccent),
             tooltip: _l10n.run,
           ),
         ],

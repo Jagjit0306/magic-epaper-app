@@ -418,7 +418,7 @@ class _ImageLibraryScreenState extends State<ImageLibraryScreen> {
             child: Consumer<ImageLibraryProvider>(
               builder: (context, provider, child) {
                 if (provider.isLoading) {
-                  return const Center(
+                  return Center(
                       child: CircularProgressIndicator(color: colorAccent));
                 }
 
