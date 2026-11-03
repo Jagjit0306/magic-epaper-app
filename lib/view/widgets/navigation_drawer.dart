@@ -114,9 +114,10 @@ class _AppDrawerState extends State<AppDrawer> {
     final appLocalizations = AppLocalizations.of(context)!;
     final developerOptionsEnabled =
         context.watch<DeveloperOptionsProvider>().enabled;
+    final colorScheme = Theme.of(context).colorScheme;
 
     return Drawer(
-      backgroundColor: drawerHeaderTitle,
+      backgroundColor: colorScheme.surface,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -187,8 +188,8 @@ class _AppDrawerState extends State<AppDrawer> {
                 horizontal: 18.0, vertical: Dimens.spacingMd),
             child: Text(
               appLocalizations.other,
-              style: const TextStyle(
-                color: colorBlack54,
+              style: TextStyle(
+                color: colorScheme.onSurfaceVariant,
                 fontWeight: FontWeight.bold,
                 fontSize: Dimens.fontSizeM,
               ),
@@ -235,25 +236,30 @@ class _AppDrawerState extends State<AppDrawer> {
     String? shareText,
     bool isCustomAction = false,
   }) {
+    final colorScheme = Theme.of(context).colorScheme;
+
     return ListTile(
       dense: true,
       leading: icon != null
-          ? Icon(icon, color: currentIndex == index ? colorAccent : colorBlack)
+          ? Icon(
+              icon,
+              color: currentIndex == index ? colorAccent : colorScheme.onSurface,
+            )
           : Image.asset(
               assetIcon!,
               height: 18,
-              color: currentIndex == index ? colorAccent : colorBlack,
+              color: currentIndex == index ? colorAccent : colorScheme.onSurface,
             ),
       title: Text(
         title,
         style: TextStyle(
-          color: currentIndex == index ? colorAccent : colorBlack,
+          color: currentIndex == index ? colorAccent : colorScheme.onSurface,
           fontWeight: FontWeight.bold,
           fontSize: Dimens.fontSizeM,
         ),
       ),
       selected: currentIndex == index,
-      selectedTileColor: dividerColor,
+      selectedTileColor: colorAccent.withValues(alpha: 0.12),
       onTap: () {
         updateSelectedIndex(index);
 
@@ -288,19 +294,24 @@ class _AppDrawerState extends State<AppDrawer> {
     bool isCustomAction = false,
     bool showHelp = false,
   }) {
+    final colorScheme = Theme.of(context).colorScheme;
+
     return ListTile(
       dense: true,
       leading: icon != null
-          ? Icon(icon, color: currentIndex == index ? colorAccent : colorBlack)
+          ? Icon(
+              icon,
+              color: currentIndex == index ? colorAccent : colorScheme.onSurface,
+            )
           : Image.asset(
               assetIcon!,
               height: 18,
-              color: currentIndex == index ? colorAccent : colorBlack,
+              color: currentIndex == index ? colorAccent : colorScheme.onSurface,
             ),
       title: Text(
         title,
         style: TextStyle(
-          color: currentIndex == index ? colorAccent : colorBlack,
+          color: currentIndex == index ? colorAccent : colorScheme.onSurface,
           fontWeight: FontWeight.bold,
           fontSize: Dimens.fontSizeM,
         ),
@@ -311,21 +322,25 @@ class _AppDrawerState extends State<AppDrawer> {
               style: TextStyle(
                 color: currentIndex == index
                     ? colorAccent.withValues(alpha: 0.7)
-                    : grey600,
+                    : colorScheme.onSurfaceVariant,
                 fontSize: Dimens.fontSizeS,
               ),
             )
           : null,
       trailing: showHelp
           ? IconButton(
-              icon: Icon(Icons.help_outline, size: 18, color: grey600),
+              icon: Icon(
+                Icons.help_outline,
+                size: 18,
+                color: colorScheme.onSurfaceVariant,
+              ),
               onPressed: _showArduinoHelpDialog,
               padding: EdgeInsets.zero,
               constraints: const BoxConstraints(),
             )
           : null,
       selected: currentIndex == index,
-      selectedTileColor: dividerColor,
+      selectedTileColor: colorAccent.withValues(alpha: 0.12),
       onTap: () {
         updateSelectedIndex(index);
 

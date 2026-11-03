@@ -159,7 +159,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                     ),
                     onTap: () => openUrl(
                       context,
-                      'https://github.com/fossasia/magic-epaper-app',
+                      'https://github.com/Jagjit0306/magic-epaper-app',
                     ),
                   ),
                 ),

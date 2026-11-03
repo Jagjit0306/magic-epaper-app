@@ -1430,6 +1430,6 @@
   "green": "Green",
   "purple": "Purple",
   "orange": "Orange",
-  "forkCreditTitle": "Fork and contributions",
-  "forkCreditDescription": "Forked from FOSSASIA's Magic ePaper app. This fork includes startup fixes, Waveshare 1.54-inch tri-color support, and an NFC color-plane fix."
+  "forkCreditTitle": "Jagjit0306's Magic ePaper fork",
+  "forkCreditDescription": "This is the Jagjit0306/magic-epaper-app fork of FOSSASIA's Magic ePaper app. Contributions include startup fixes, Waveshare 1.54-inch tri-color support, and an NFC color-plane fix."
 }
