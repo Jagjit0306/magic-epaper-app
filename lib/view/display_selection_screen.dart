@@ -441,26 +441,37 @@ class _DisplaySelectionScreenState extends State<DisplaySelectionScreen> {
                                 SliverPadding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: Dimens.spacingMd),
-                                  sliver: SliverGrid(
-                                    gridDelegate:
-                                        const SliverGridDelegateWithMaxCrossAxisExtent(
-                                      maxCrossAxisExtent: 340,
-                                      mainAxisSpacing: Dimens.spacingS,
-                                      crossAxisSpacing: Dimens.spacingS,
-                                      childAspectRatio: 0.75,
-                                    ),
-                                    delegate: SliverChildBuilderDelegate(
-                                      (context, index) {
-                                        final display = grouped[brand]![index];
-                                        return DisplayCard.fill(
-                                          key: Key(display.modelId),
-                                          display: display,
-                                          isSelected: false,
-                                          onTap: () => _onTap(context, display),
+                                  sliver: SliverLayoutBuilder(
+                                    builder: (context, constraints) {
+                                      if (constraints.crossAxisExtent <= 0) {
+                                        return const SliverToBoxAdapter(
+                                          child: SizedBox.shrink(),
                                         );
-                                      },
-                                      childCount: grouped[brand]!.length,
-                                    ),
+                                      }
+                                      return SliverGrid(
+                                        gridDelegate:
+                                            const SliverGridDelegateWithMaxCrossAxisExtent(
+                                          maxCrossAxisExtent: 340,
+                                          mainAxisSpacing: Dimens.spacingS,
+                                          crossAxisSpacing: Dimens.spacingS,
+                                          childAspectRatio: 0.75,
+                                        ),
+                                        delegate: SliverChildBuilderDelegate(
+                                          (context, index) {
+                                            final display =
+                                                grouped[brand]![index];
+                                            return DisplayCard.fill(
+                                              key: Key(display.modelId),
+                                              display: display,
+                                              isSelected: false,
+                                              onTap: () =>
+                                                  _onTap(context, display),
+                                            );
+                                          },
+                                          childCount: grouped[brand]!.length,
+                                        ),
+                                      );
+                                    },
                                   ),
                                 ),
                               ],
