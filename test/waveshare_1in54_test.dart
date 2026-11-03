@@ -39,16 +39,43 @@ void main() {
       );
     });
 
-    test('NFC codec encodes red using the secondary color plane', () {
+    test('NFC codec keeps red pixels out of the black color plane', () {
       final profile = WaveshareNfcProfile.fromType(8);
       final image = img.Image(width: 200, height: 200);
-      image.clear(img.ColorRgb8(255, 0, 0));
+      for (var y = 0; y < image.height; y++) {
+        for (var x = 0; x < image.width; x++) {
+          if (x < 64) {
+            image.setPixelRgb(x, y, 0, 0, 0);
+          } else if (x < 128) {
+            image.setPixelRgb(x, y, 255, 0, 0);
+          } else {
+            image.setPixelRgb(x, y, 255, 255, 255);
+          }
+        }
+      }
 
       final encoded = WaveshareImageCodec().encode(profile, image);
+      const sampleX = 80;
+      const sampleY = 100;
+      final sampleIndex = sampleY * profile.displayWidth + sampleX;
+      final sampleByte = sampleIndex ~/ 8;
+      final sampleMask = 0x80 >> (sampleIndex % 8);
 
       expect(profile.isHdDisplay, isTrue);
-      expect(encoded.primary.take(5000).every((byte) => byte == 0), isTrue);
-      expect(encoded.secondary.take(5000).any((byte) => byte != 0), isTrue);
+      expect(encoded.primary[sampleByte] & sampleMask, isNonZero);
+      expect(encoded.secondary[sampleByte] & sampleMask, isNonZero);
+
+      final blackIndex = sampleY * profile.displayWidth + 20;
+      final blackByte = blackIndex ~/ 8;
+      final blackMask = 0x80 >> (blackIndex % 8);
+      expect(encoded.primary[blackByte] & blackMask, 0);
+      expect(encoded.secondary[blackByte] & blackMask, 0);
+
+      final whiteIndex = sampleY * profile.displayWidth + 160;
+      final whiteByte = whiteIndex ~/ 8;
+      final whiteMask = 0x80 >> (whiteIndex % 8);
+      expect(encoded.primary[whiteByte] & whiteMask, isNonZero);
+      expect(encoded.secondary[whiteByte] & whiteMask, 0);
     });
   });
 }

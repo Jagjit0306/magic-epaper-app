@@ -140,7 +140,8 @@ class WaveshareImageCodec {
           primaryValue <<= 1;
           secondaryValue <<= 1;
           final index = bit + byteColumn * 8 + row * profile.displayWidth;
-          if (_pixelAt(sourcePixels, index).isWhite) {
+          if (_pixelAt(sourcePixels, index).isWhite ||
+              _pixelAt(redPixels, index).b < 128) {
             primaryValue |= 1;
           }
 
